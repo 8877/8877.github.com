@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="8877" />
+<meta name="keywords" content="8877,离线文档,Robots.txt写法" />
+<title>Robots.txt写法详解</title>
+<style type="text/css">
+body {
+    font-size: 100%;
+    color: #000;
+    font-family: 'arkpunctuation',"Helvetica Neue",Helvetica,"Lucida Grande","Luxi Sans",Arial,"Hiragino Sans GB",STHeiti,"Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei Mono",LiGothicMed;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: normal;
+    line-height: 1.5;
+    max-width: 900px;
+    margin: 0 auto;
+    padding:0 10px;
+}
+.title{
+    font-size: 1.5em;
+    color:#0069d6;
+    border-bottom: solid 1px #333;
+}
+.from{
+    font-size: 0.8em;
+    color: gray;
+    font-style: italic;
+    font-weight: normal;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+img{
+    max-width: 100%;
+}
+</style>
+</head>
+<body>
+<h1 class="title">Robots.txt写法详解</h1>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	<strong>　　一、robots.txt是干什么用的</strong></p>
+<p xmlns="http://www.w3.org/1999/xhtml" >
+	　　robots.txt写法详解及注意事项</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　一个网站中有很多个文件，其中包含了后台程序文件、前台模板文件、图片等等。这之中有一些东西我们是不希望被百度蜘蛛抓取的，怎么办呢?搜索程序考 虑到了这一点，蜘蛛在抓取网站页面之前会先访问网站根目录下的robots.txt文件，如果此文件存在那么按照robots.txt限定的范围进行抓 取，如果不存在，则默认为可以抓取全部。</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	<strong>　　二、robots.txt在seo中在作用</strong></p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　前一篇文章“度娘无视robots.txt文件的存在” 中我们可以看到，百度一个页面抓取的两个网址，这样会分散网页的权重，如果我们写好robots.txt就可以避免这样的情况产生。robots.txt 在seo中在作用就是屏蔽不必要的页面抓取，为有效页面赢得蜘蛛抓取的机会。由于屏蔽不必要页面抓取从而可以页面权重，节省网络资源;最后我们可以将网站 地图放在里面，方便蜘蛛抓取网页。</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	<strong>　　三、哪些文件是可以用robots.txt屏蔽的</strong></p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　网页中的模板文件、样式表文件以及后台的某些文件即使呗搜索引擎抓取了也没什么作用，反而是浪费网站资源，这类文件可以屏蔽;如果网页中的某些特定页面比如联系我们、公司内部某些不需要公开的照片这些都可以根据实际情况进行屏蔽。</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	<strong>　　四、robots.txt写法详解及注意事项</strong></p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　以主机博客为例，robots.txt文件如下：</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　User-agent:* //允许所有搜索引擎蜘蛛抓取 Disallow:/wp- //不允许抓取url中带wp-的网址 Allow:/wp-content/uploads/ //允许抓取wp-content/uploads/目录下的文件</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　Disallow:/*?* //不允许抓取url中带?的网址 Disallow:/feed Disallow: /trackback Disallow: /index.php? Disallow: /*.php$ //不允许抓取url中以.php结尾的网址 Disallow: /*.css$ Disallow: /date/ Sitemap: http://www.chenhaoseo.com/sitemap.xml //网站地图 Sitemap: http://www.chenhaoseo.com/sitemap_baidu.xml</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　User-agent:*这样的记录只能有一条。*代表所有引擎蜘蛛，如果仅仅只针对某个搜索引擎可以这样写果User-agent:Baiduspider表示只下面规则都是针对百度蜘蛛的。</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　Disallow: 描述不需要被索引的网址或者是目录。比如Disallow:/wp-不允许抓取url中带wp-的网址;要注意的是Disallow: /date/与Disallow: /date是不一样的;前者仅仅是不允许抓取date目录下的网址，如果data目录下还有子文件夹，那么子目录是允许抓取的，后者可以屏蔽date目录 下所有文件，包括起子文件夹。</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　Allow:描述不需要被索引的网址或者是目录。功能跟disallow相反，特别注意的是Disallow与Allow行的顺序是有意义的，robot会根据第一个匹配成功的Allow或Disallow行确定是否访问某个URL。</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　使用”*”和”$”：Baiduspider支持使用通配符”*”和”$”来模糊匹配url。”$” 匹配行结束符。”*” 匹配0或多个任意字符。</p>
+<p xmlns="http://www.w3.org/1999/xhtml">
+	　　robots.txt写法详解及注意事项就写到这里，如果你写完之后感觉有疑问，你可以用谷歌管理员工具进行测试，确保robots.txt书写正确这样才能起到效果。</p>
+<h3 class="from">原文: <a href="http://www.admin5.com/article/20120227/410784.shtml" target="_blank;">http://www.admin5.com/article/20120227/410784.shtml</a></h3>
+<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F7a6b06e35781e7b430b26e5a9ef972a8' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="8877" />
+<meta name="keywords" content="8877,离线文档,robots.txt的写法" />
+<title>robots.txt的写法</title>
+<style type="text/css">
+body {
+    font-size: 100%;
+    color: #000;
+    font-family: 'arkpunctuation',"Helvetica Neue",Helvetica,"Lucida Grande","Luxi Sans",Arial,"Hiragino Sans GB",STHeiti,"Microsoft YaHei","Wenquanyi Micro Hei","WenQuanYi Micro Hei Mono","WenQuanYi Zen Hei","WenQuanYi Zen Hei Mono",LiGothicMed;
+    font-size: 16px;
+    word-wrap: break-word;
+    word-break: normal;
+    line-height: 1.5;
+    max-width: 900px;
+    margin: 0 auto;
+    padding:0 10px;
+}
+.title{
+    font-size: 1.5em;
+    color:#0069d6;
+    border-bottom: solid 1px #333;
+}
+.from{
+    font-size: 0.8em;
+    color: gray;
+    font-style: italic;
+    font-weight: normal;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+img{
+    max-width: 100%;
+}
+</style>
+</head>
+<body>
+<h1 class="title">robots.txt的写法</h1>
+<p xmlns="http://www.w3.org/1999/xhtml"><strong>什么是robots.txt？</strong><br />
+robots.txt是一个纯文本文件，通过在这个文件中声明该网站中不想被搜索引擎 robots 访问的部分，如一般站点的后台登陆页面，购物车内容等。当然，也可以指定搜索引擎只收录指定的内容。当一个搜索机器人访问一个站点时，它会首先检查该站点根目录下是否存在robots.txt，如果找到该文件，搜索机器人就会按照该文件中的内容来确定访问的范围和规则，如果不存在，搜索机器人就沿着站点链接抓取。</p>
+<p xmlns="http://www.w3.org/1999/xhtml"><span class="wp_keywordlink_affiliate"><a href="http://www.yzznl.cn/about" title="园子" rel="nofollow">园子</a></span>需要提醒你的是：robots.txt必须放置在一个站点的根目录下，而且文件名必须全部小写。<br />
+<span id="more-32203"></span></p>
+<p xmlns="http://www.w3.org/1999/xhtml"><strong>robots.txt的语法</strong></p>
+<p xmlns="http://www.w3.org/1999/xhtml">robots.txt文件可以包含一条或者更多的记录，这些记录通过空行分开（以CR,CR/NL,orNL作为结束符），在该文件中可以使用#进行注解，具体使用方法和UNIX中的惯例一样。该文件中的记录通常以一行或多行User-agent开始，后面加上若干Disallow行，详细说明如下：</p>
+<ul xmlns="http://www.w3.org/1999/xhtml">
+<li>User-agent<br />
+该项的值用于描述搜索引擎robot的名字，在robots.txt文件中，如果有多条User-agent记录说明有多个robot会受到该协议的限制，对该文件来说，至少要有一条User-agent记录。如果该项的值设为*，则该协议对任何机器人均有效，在robots.txt文件中，”User-agent：*”这样的记录只能有一条。</li>
+<li>Disallow<br />
+该项的值用于描述不希望被访问到的一个URL，这个URL可以是一条完整的路径，也可以是部分的，任何以Disallow开头的URL均不会被robot访问到。例如”Disallow:/admin”对/admin.html和/admin/index.html都不允许搜索引擎访问，而”Disallow:/admin/”则允许robot访问/admin.html，而不能访问/admin/admin.html。</li>
+<li>任何一条Disallow记录为空，说明该网站的所有部分都允许被访问，在”robots.txt”文件中，至少要有一条Disallow记录。如果”robots.txt”是一个空文件，则对于所有的搜索引擎robot，该网站都是开放的。</li>
+</ul>
+<p xmlns="http://www.w3.org/1999/xhtml"><strong>robots.txt的常见写法</strong></p>
+<ul xmlns="http://www.w3.org/1999/xhtml">
+<li>禁止所有搜索引擎访问网站的任何部分：<br />
+<font color="#0099cc">User-agent: *<br />
+Disallow: /</font></li>
+<li>允许所有的robot访问<br />
+<font color="#0099cc">User-agent: *<br />
+Disallow:</font><br />
+或者你也可以建一个空文件:robots.txt</li>
+<li>禁止所有搜索引擎访问网站的几个部分（如下例中的cgi-bin、tmp、private目录）<br />
+<font color="#0099cc">User-agent: *<br />
+Disallow: /cgi-bin/<br />
+Disallow: /tmp/<br />
+Disallow: /private/</font></li>
+<li>禁止某个搜索引擎的访问（下例中的BadBot）<br />
+<font color="#0099cc">User-agent: BadBot<br />
+Disallow: /</font></li>
+<li>只允许某个搜索引擎的访问（下例中的WebCrawler）<br />
+<font color="#0099cc">User-agent: WebCrawler<br />
+Disallow:</font></li>
+<li>下面是一些著名站点的robots.txt，你也可以参考他们的写法。<br />
+<a href="http://www.google.com/robots.txt" class="external" target="_blank">http://www.google.com/robots.txt</a><br />
+<a href="http://www.ibm.com/robots.txt" class="external" target="_blank">http://www.ibm.com/robots.txt</a><br />
+<a href="http://www.sun.com/robots.txt" class="external" target="_blank">http://www.sun.com/robots.txt</a><br />
+<a href="http://www.baidu.com/robots.txt" class="external" target="_blank">http://www.baidu.com/robots.txt</a></li>
+</ul>
+<p xmlns="http://www.w3.org/1999/xhtml"><strong>常见搜索引擎Robots名字</strong></p>
+<ul xmlns="http://www.w3.org/1999/xhtml">
+<li>Baiduspider  <a href="http://www.baidu.com/" class="external" target="_blank">http://www.baidu.com</a></li>
+<li>Googlebot  <a href="http://www.google.com/" class="external" target="_blank">http://www.google.com</a></li>
+<li>Scooter  <a href="http://www.altavista.com/" class="external" target="_blank">http://www.altavista.com</a></li>
+<li>ia_archiver  <a href="http://www.alexa.com/" class="external" target="_blank">http://www.alexa.com</a></li>
+<li>Inktomi Slurp  <a href="http://www.yahoo.com/" class="external" target="_blank">http://www.yahoo.com</a></li>
+<li>FAST-WebCrawler <a href="http://www.alltheweb.com/" class="external" target="_blank">http://www.alltheweb.com</a></li>
+<li>MSNbot   <a href="http://search.msn.com/" class="external" target="_blank">http://search.msn.com</a></li></ul>
+<h3 class="from">原文: <a href="http://www.yzznl.cn/archives/22.html" target="_blank;">http://www.yzznl.cn/archives/22.html</a></h3>
+<div style="display:none;">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F7a6b06e35781e7b430b26e5a9ef972a8' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
+</body>
+</html>
