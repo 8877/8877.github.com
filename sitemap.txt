@@ -2,6 +2,7 @@ https://8877.github.io/docs/classic/twenty-four_histories_in_the_30_famous_class
 https://8877.github.io/docs/cookbook/best_sports_food_supply.html
 https://8877.github.io/docs/cookbook/collected_watercress_recipes.html
 https://8877.github.io/docs/css/CSS_Chinese_font_name_table.html
+https://8877.github.io/docs/java/android_development_environment_configuration.html
 https://8877.github.io/docs/java/Java_Programming_Cheatsheet.html
 https://8877.github.io/docs/js/JavaScript-Garden.html
 https://8877.github.io/docs/pc/detailed_written_robots.html
