@@ -5,6 +5,7 @@ https://8877.github.io/docs/css/CSS_Chinese_font_name_table.html
 https://8877.github.io/docs/java/android_development_environment_configuration.html
 https://8877.github.io/docs/java/Java_Programming_Cheatsheet.html
 https://8877.github.io/docs/js/JavaScript-Garden.html
+https://8877.github.io/docs/js/regular_expressions_tutorial.html
 https://8877.github.io/docs/pc/detailed_written_robots.html
 https://8877.github.io/docs/pc/google-search-skill.html
 https://8877.github.io/docs/pc/robots_txt_wording.html
