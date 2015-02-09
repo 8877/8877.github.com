@@ -15,18 +15,14 @@ var $ = tvp.$;
 $.ajax({
   url:"https://8877.github.io/data.json",
   dataType:"json"
-}).done(function(d){
-  alert('https:' + d)
-})
+});
 
 $.ajax({
   url:"http://8877.github.io/data.json"
-}).done(function(d){
-  alert('http:' + d)
 })
 
 function cb(d){
-  alert(d)
+  alert(d.name)
 }
 </script>
 </body>
