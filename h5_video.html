@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
+<title>h5 video test</title>
+</head>
+<body>
+<video id="vv" src="http://v.qq.com/dtest/video/demo.mp4" controls="controls" style="width:100%;height:250px;" webkit-playsinline x-webkit-airplay></video>
+
+<!-- <video id="vv" src="http://119.147.83.20/vkp.tc.qq.com/i00159hzemt.m401.mp4?vkey=2BCF10062D38CA93B38FAC7A83971D1447EA5AC56AEBD2F252A3711FEE59E06395C96B4A05D73E6F6D6581E947E08D0EAC40326092CED1E0&br=34&platform=2&fmt=auto&level=0&sdtfrom=v5010&locid=09b2c590-14ad-497e-9998-5bf0edb119fc&size=53459133&ocid=211034028" controls="controls" style="width:100%;height:250px;"></video> -->
+
+
+
+<p>检测是否支持 h5 video标签</p>
+<p>检测是否支持 webkit-playsinline</p>
+<p>检测是否支持 x-webkit-airplay 3</p>
+
+<script>
+var video = document.getElementById('vv');
+// setTimeout(function(){
+	video.load();
+	video.play();
+// },3000)
+
+// var u2 = 'http://119.147.83.12/vkp.tc.qq.com/b00151yckaw.m1.mp4?vkey=781376CB9BC27A1D6EC185AF13CDD1A1F253EBF77EA5B967B2E46DDC2039B7A4FEC2E02B49FD24714091A9897A2B245DCCCBB08297B2DB4E&br=29&platform=2&fmt=auto&level=0&sdtfrom=v5010';
+// video.addEventListener('ended', function(){
+// 	video.setAttribute('src',u2);
+// 	video.load();
+// 	video.play();
+// });
+
+
+</script>
+</body>
+</html>
