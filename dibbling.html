@@ -13,18 +13,16 @@
 <script>
 var $ = tvp.$;
 $.ajax({
-  url:"https://8877.github.io/data.json",
-  success: function(d){
-    alert('https:' + d)
-  }
-});
+  url:"https://8877.github.io/data.json"
+}).done(function(d){
+  alert('https:' + d)
+})
 
 $.ajax({
-  url:"http://8877.github.io/data.json",
-  success: function(d){
-    alert('http:' + d)
-  }
-});
+  url:"http://8877.github.io/data.json"
+}).done(function(d){
+  alert('http:' + d)
+})
 </script>
 </body>
 </html>
