@@ -6,18 +6,17 @@
 <title>https直播</title>
 </head>
 <body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js"></script>
 <script src="//imgcache.qq.com/tencentvideo_v1/tvp/js/tvp.player_v2_zepto.js" type="text/javascript"></script>
 
 <div id="mod_player"></div>
 <script>
 var video = new tvp.VideoInfo();
-video.setChannelId("100104700");
+video.setVid("c0016qterz5");
 var player = new tvp.Player();
 player.create({
     width: '100%',
     height: 260,
-    type: 1,
     video: video,
     modId: "mod_player",
     isHtml5UseUI:true,
